@@ -1,0 +1,19 @@
+*************************************This Is Our Spring Tutorial Project********************************************
+In this demo we will see spring MVC.
+
+Usual Servlet request handling flow.
+View(Front End)------>web.xml(Deployment descriptor)--------->Servlets.
+
+
+
+Spring MVC flow:
+View(Front End)------>Servlet Dispatcher(a.k.a.Front Controller)--------->Controllers.
+
+
+
+also one of the difference between Spring MVC and conventional servlets programming is that in Servlets for each Request Handling we were supposed to Create a new servlet.
+But in Spring MVC we can have only one controller class and in that controller class we can have multiple methods to handle different request.
+
+Look at this Demonstration and to understand more about it.
+
+ 
