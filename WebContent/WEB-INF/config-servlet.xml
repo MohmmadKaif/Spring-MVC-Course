@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+    	http://www.springframework.org/schema/beans/spring-beans.xsd
+    	http://www.springframework.org/schema/context
+    	http://www.springframework.org/schema/context/spring-context.xsd
+    	http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<!-- 
+	Step 3: Add support for component scanning
+	Here we are enabling the component scanning on our base package..
+	
+	Also remember one thing while working with Spring MVC it is important that you make one package as your base package
+	and start making your other packages as sub packages of the base package.
+	In this example our base package is com.SpringMvcTesting. Refer project explorer for reference.
+	 -->
+	<context:component-scan base-package="com.SpringMvcTesting" />
+
+	<!-- Step 4: Add support for conversion, formatting and validation support -->
+	<mvc:annotation-driven/>
+
+	<!-- 
+	Step 5: Define Spring MVC view resolver 
+	The view resolver is required in order to add the prefix and post fix to the pages which we want to return the controller.
+	Due to this there is loose coupling and thus the technology used for responsive front end can be changed any time.
+	-->
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/view/" />
+		<property name="suffix" value=".jsp"/>
+	</bean>
+
+</beans>
+
+
+
+
+
