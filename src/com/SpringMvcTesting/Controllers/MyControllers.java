@@ -17,7 +17,7 @@ public class MyControllers {
 	 * Now this url with only '/' will run automatically and the page which you want to show first you can return it.
 	 * You can consider this as a default running page
 	 * Also there should be atleast be one default mapping like this so that it runs whenever we run our application.*/ 
-	@RequestMapping("/")
+	@RequestMapping("/fdf")
 	public String laodHome() {
 		return "home";
 	}

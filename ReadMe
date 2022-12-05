@@ -1,19 +1,17 @@
 *************************************This Is Our Spring Tutorial Project********************************************
-In this demo we will see spring MVC.
+In this demo we will see how to use spring MVC form tags.
 
-Usual Servlet request handling flow.
-View(Front End)------>web.xml(Deployment descriptor)--------->Servlets.
+Spring MVC form tags can be helpful for setting the date directly into the a object.
+
+Flow:
+1) We pass the object in which data is supposed to be set, during loading of the page.Remember we pass this object inside a model object. 
+   Then when user fills the data and submits it the data is set in the object passed in model object and then it can be used by the controller responsible for providing the response.  
+2) The controller which is responsible for providing the response will use this data which was set in that particular object and provide the response.
+
+Look this demonstration for more details.
 
 
-
-Spring MVC flow:
-View(Front End)------>Servlet Dispatcher(a.k.a.Front Controller)--------->Controllers.
-
-
-
-also one of the difference between Spring MVC and conventional servlets programming is that in Servlets for each Request Handling we were supposed to Create a new servlet.
-But in Spring MVC we can have only one controller class and in that controller class we can have multiple methods to handle different request.
-
-Look at this Demonstration and to understand more about it.
-
- 
+Things to look:
+1)StudentController class.
+2)home.jsp
+3)response.jsp    
